@@ -1005,6 +1005,34 @@ void Remover::cleanStyle(SvgElement &elem) const
     }
 }
 
+// MBCHANGE!!!!
+// Prepares element for external fill color
+void Remover::removePathFill() const
+{
+    element_loop (svgElement()) {
+        if (elem.tagName() != E_path)
+            continue;
+
+        if (elem.hasAttribute(AttrId::fill)) {
+            elem.removeAttribute(AttrId::fill);
+        }
+    }
+}
+
+// MBCHANGE!!!!
+// Prepares element for external fill color
+void Remover::removeGroupFill() const
+{
+    element_loop (svgElement()) {
+        if (!elem.isGroup())
+            continue;
+
+        if (elem.hasAttribute(AttrId::fill)) {
+            elem.removeAttribute(AttrId::fill);
+        }
+    }
+}
+
 void Remover::removeGroups() const
 {
     IntList illegalGAttrList = IntList() << AttrId::mask << AttrId::clip_path << AttrId::filter;

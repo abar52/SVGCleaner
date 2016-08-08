@@ -68,6 +68,8 @@ namespace KeyStr {
     const QString RemoveUnusedXLinks          = QL1S("--remove-unused-xlinks");
     const QString GroupTextStyles             = QL1S("--group-text-styles");
     const QString GroupElemByStyle            = QL1S("--group-elts-by-styles");
+    const QString GroupRemoveFill             = QL1S("--group-remove-fill"); // MBCHANGE!!
+    const QString PathRemoveFill              = QL1S("--path-remove-fill"); // MBCHANGE!!
     const QString JoinStyleAttributes         = QL1S("--join-style-atts");
     const QString SimplifyTransformMatrix     = QL1S("--simplify-transform-matrix");
     const QString ApplyTransformsToDefs       = QL1S("--apply-transforms-to-defs");
@@ -219,6 +221,10 @@ void Keys::prepareDescription()
                     tr("Group text style attributes"));
     descHash.insert(Key::GroupElemByStyle,
                     tr("Group elements by style properties"));
+    descHash.insert(Key::GroupRemoveFill,
+                    tr("Remove Fill From Groups")); // MBCHANGE!!
+    descHash.insert(Key::PathRemoveFill,
+                    tr("Remove Fill From Paths")); // MBCHANGE!!
     descHash.insert(Key::JoinStyleAttributes,
                     tr("Merge style properties into 'style' attribute"));
     descHash.insert(Key::SimplifyTransformMatrix,
@@ -314,6 +320,8 @@ QList<int> Keys::attributesKeysId()
         << Key::RemoveUnusedXLinks
         << Key::GroupTextStyles
         << Key::GroupElemByStyle
+        << Key::GroupRemoveFill // MBCHANGE
+        << Key::PathRemoveFill // MBCHANGE
         << Key::SimplifyTransformMatrix
         << Key::ApplyTransformsToDefs
         << Key::ApplyTransformsToShapes;
@@ -452,6 +460,8 @@ QStringList Keys::allKeys()
         << KeyStr::RemoveUnusedXLinks
         << KeyStr::GroupTextStyles
         << KeyStr::GroupElemByStyle
+        << KeyStr::GroupRemoveFill // MBCHANGE!!
+        << KeyStr::PathRemoveFill // MBCHANGE!!
         << KeyStr::SimplifyTransformMatrix
         << KeyStr::ApplyTransformsToDefs
         << KeyStr::ApplyTransformsToShapes

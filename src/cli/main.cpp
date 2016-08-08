@@ -202,6 +202,12 @@ void processFile(const QString &inPath, const QString &outPath)
         remover.ungroupSwitchElement();
         remover.removeGroups();
     }
+    if (Keys.flag(Key::GroupRemoveFill)) { // MBCHANGE!!!
+        remover.removeGroupFill();
+    }
+    if (Keys.flag(Key::PathRemoveFill)) { // MBCHANGE!!!
+        remover.removePathFill();
+    }
     replacer.processPaths();
     if (Keys.flag(Key::ReplaceEqualPathsByUse))
         replacer.replaceEqualPathsWithUse();

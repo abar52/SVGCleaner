@@ -80,6 +80,8 @@ enum Key {
     RemoveUnusedXLinks,
     GroupTextStyles,
     GroupElemByStyle,
+    GroupRemoveFill, // MBCHANGE!!
+    PathRemoveFill, // MBCHANGE!!
     SimplifyTransformMatrix,
     ApplyTransformsToDefs,
     ApplyTransformsToShapes,
@@ -152,6 +154,8 @@ namespace KeyStr {
     extern const QString RemoveUnusedXLinks;
     extern const QString GroupTextStyles;
     extern const QString GroupElemByStyle;
+    extern const QString GroupRemoveFill; // MBCHANGE!!!
+    extern const QString PathRemoveFill; // MBCHANGE!!!
     extern const QString JoinStyleAttributes;
     extern const QString SimplifyTransformMatrix;
     extern const QString ApplyTransformsToDefs;

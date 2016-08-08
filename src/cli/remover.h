@@ -39,6 +39,8 @@ public:
     void checkXlinkDeclaration() const;
     void removeAttributes() const;
     void cleanPresentationAttributes() const;
+    void removePathFill() const; // MBCHANGE!!!
+    void removeGroupFill() const; // MBCHANGE!!!
     void removeGroups() const;
     void ungroupSwitchElement() const;
     void ungroupAElement() const;
