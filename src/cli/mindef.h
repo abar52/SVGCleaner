@@ -42,7 +42,7 @@ uint hash(const QChar *p, int n);
 
 #include <QtGlobal>
 #if QT_VERSION >= 0x050000
-    uint qHash(const QString&, uint seed);
+    uint qHash(const QString&, uint seed) noexcept; // MBCHANGE!!!
 #else
     uint qHash(const QString &key);
 #endif

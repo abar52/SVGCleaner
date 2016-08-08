@@ -22,7 +22,7 @@
 #include "mindef.h"
 
 #if QT_VERSION >= 0x050000
-    uint qHash(const QString& key, uint seed)
+    uint qHash(const QString& key, uint seed) noexcept // MBCHANGE!!
 #else
     uint qHash(const QString &key)
 #endif
