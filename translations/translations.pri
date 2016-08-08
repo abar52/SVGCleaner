@@ -5,8 +5,8 @@ isEmpty(QMAKE_LRELEASE) {
 unix {
     # fix for distros which already moved to qt5
     !exists(/usr/bin/$$QMAKE_LRELEASE) {
-        message(/usr/bin/$$QMAKE_LRELEASE not found - replaced with /usr/bin/lrelease-qt4)
-        QMAKE_LRELEASE = lrelease-qt4
+        message(/usr/bin/$$QMAKE_LRELEASE not found - replaced with /usr/bin/lrelease)
+        QMAKE_LRELEASE = lrelease
     }
 }
 
